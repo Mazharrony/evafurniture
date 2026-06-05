@@ -22,10 +22,10 @@ export default function NotFound() {
             Return Home
           </ButtonLink>
           <Link
-            href="/portfolio"
+            href="/collections"
             className="inline-flex items-center px-6 py-3 text-sm text-bone/80 transition-colors hover:text-gold"
           >
-            View Portfolio
+            View Collections
           </Link>
         </div>
       </Container>

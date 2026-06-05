@@ -6,11 +6,9 @@ import { ArrowLeft, Check } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { Reveal } from "@/components/ui/Reveal";
 import { ButtonLink } from "@/components/ui/Button";
-import { ProjectCard } from "@/components/ui/ProjectCard";
 import { GoldDivider, MashrabiyaPattern } from "@/components/ui/Motifs";
 import { CTABand } from "@/components/sections/CTABand";
 import { sectors, getSector } from "@/data/sectors";
-import { getProjectsBySector } from "@/data/projects";
 
 export function generateStaticParams() {
   return sectors.map((s) => ({ sector: s.slug }));
@@ -39,7 +37,6 @@ export default async function SectorPage({
   const data = getSector(sector);
   if (!data) notFound();
 
-  const related = getProjectsBySector(sector);
   const index = sectors.findIndex((s) => s.slug === sector);
   const next = sectors[(index + 1) % sectors.length];
 
@@ -150,27 +147,6 @@ export default async function SectorPage({
           ))}
         </Container>
       </section>
-
-      {/* Related projects */}
-      {related.length > 0 && (
-        <section className="bg-onyx py-24 md:py-32">
-          <Container>
-            <h2 className="font-display text-2xl font-light text-bone md:text-3xl">
-              {data.name} projects
-            </h2>
-            <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-              {related.map((project, i) => (
-                <Reveal key={project.slug} delay={(i % 3) * 0.08}>
-                  <ProjectCard
-                    project={project}
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                  />
-                </Reveal>
-              ))}
-            </div>
-          </Container>
-        </section>
-      )}
 
       {/* Next sector */}
       <section className="border-t border-bone/10 bg-onyx-2 py-16">
