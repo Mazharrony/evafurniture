@@ -1,12 +1,37 @@
 "use client";
 
 import Image from "next/image";
-import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
+import { AnimatePresence, motion, useScroll, useTransform } from "framer-motion";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { ArrowRight } from "lucide-react";
 import { ButtonLink } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 import { MashrabiyaPattern } from "@/components/ui/Motifs";
+
+const slides = [
+  {
+    src: "/image/arab/moroccan-living-room.jpg",
+    alt: "A luxurious Arabian majlis with gold detailing and arched alcoves",
+  },
+  {
+    src: "/image/arab/modern-majlis.jpg",
+    alt: "A modern majlis with low seating and warm natural tones",
+  },
+  {
+    src: "/image/arab/boho-majlis.jpg",
+    alt: "A boho-styled majlis layered with textiles and woven detail",
+  },
+  {
+    src: "/image/arab/traditional-majlis.jpg",
+    alt: "A traditional majlis with hand-carved geometric wall panels",
+  },
+  {
+    src: "/image/arab/arabic-majlis.jpg",
+    alt: "An opulent Arabic majlis with rich cushions and patterned rugs",
+  },
+];
+
+const SLIDE_DURATION = 6000;
 
 export function Hero() {
   const ref = useRef<HTMLElement>(null);
@@ -17,20 +42,44 @@ export function Hero() {
   const y = useTransform(scrollYProgress, [0, 1], ["0%", "22%"]);
   const opacity = useTransform(scrollYProgress, [0, 0.85], [1, 0]);
 
+  const [active, setActive] = useState(0);
+
+  const goTo = useCallback((index: number) => {
+    setActive((index + slides.length) % slides.length);
+  }, []);
+
+  useEffect(() => {
+    const id = window.setInterval(() => {
+      setActive((prev) => (prev + 1) % slides.length);
+    }, SLIDE_DURATION);
+    return () => window.clearInterval(id);
+  }, [active]);
+
   return (
     <section
       ref={ref}
       className="grain relative flex min-h-[100svh] items-center overflow-hidden bg-onyx"
     >
       <motion.div style={{ y }} className="absolute inset-0">
-        <Image
-          src="/image/arab/moroccan-living-room.jpg"
-          alt="A luxurious Arabian majlis with gold detailing and arched alcoves"
-          fill
-          priority
-          sizes="100vw"
-          className="object-cover"
-        />
+        <AnimatePresence>
+          <motion.div
+            key={active}
+            initial={{ opacity: 0, scale: 1.06 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ opacity: { duration: 1.2, ease: "easeInOut" }, scale: { duration: 6, ease: "linear" } }}
+            className="absolute inset-0"
+          >
+            <Image
+              src={slides[active].src}
+              alt={slides[active].alt}
+              fill
+              priority={active === 0}
+              sizes="100vw"
+              className="object-cover"
+            />
+          </motion.div>
+        </AnimatePresence>
         <div className="absolute inset-0 bg-gradient-to-t from-onyx via-onyx/55 to-onyx/40" />
         <div className="absolute inset-0 bg-gradient-to-r from-onyx/80 via-transparent to-transparent" />
       </motion.div>
@@ -82,12 +131,28 @@ export function Hero() {
             <ButtonLink href="/contact" size="lg" variant="gold">
               Book a Consultation <ArrowRight size={16} />
             </ButtonLink>
-            <ButtonLink href="/portfolio" size="lg" variant="outline">
+            <ButtonLink href="/services" size="lg" variant="outline">
               View Our Work
             </ButtonLink>
           </motion.div>
         </Container>
       </motion.div>
+
+      {/* Slide indicators */}
+      <div className="absolute bottom-8 left-1/2 z-10 flex -translate-x-1/2 items-center gap-3 md:left-auto md:right-10 md:translate-x-0">
+        {slides.map((slide, i) => (
+          <button
+            key={slide.src}
+            type="button"
+            onClick={() => goTo(i)}
+            aria-label={`Show slide ${i + 1}`}
+            aria-current={i === active}
+            className={`h-1.5 rounded-full transition-all duration-500 ${
+              i === active ? "w-8 bg-gold" : "w-2.5 bg-bone/30 hover:bg-bone/60"
+            }`}
+          />
+        ))}
+      </div>
 
       <div className="absolute bottom-8 left-1/2 hidden -translate-x-1/2 flex-col items-center gap-2 md:flex">
         <span className="text-[0.6rem] uppercase tracking-[0.3em] text-bone/40">
