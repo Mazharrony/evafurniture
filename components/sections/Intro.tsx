@@ -13,8 +13,8 @@ export function Intro() {
           <Reveal>
             <div className="relative aspect-[4/5] overflow-hidden arch-top">
               <Image
-                src="https://images.unsplash.com/photo-1616627561839-074385245ff6?auto=format&fit=crop&w=1200&q=80"
-                alt="An artisan finishing a bespoke timber cabinet"
+                src="/image/arab/traditional-majlis.jpg"
+                alt="A traditional Arabian majlis with hand-carved geometric wall panels"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover"

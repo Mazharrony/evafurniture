@@ -8,12 +8,11 @@ export const sectors: Sector[] = [
     tagline: "Villas, penthouses & private homes",
     intro:
       "Bespoke interiors and custom furniture for the region's most private addresses.",
-    cover:
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80",
+    cover: "/image/arab/boho-majlis.jpg",
     gallery: [
-      "https://images.unsplash.com/photo-1600210492493-0946911123ea?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1200&q=80",
+      "/image/arab/moroccan-living-room.jpg",
+      "/image/arab/traditional-majlis.jpg",
+      "/image/arab/arabic-majlis.jpg",
     ],
     description: [
       "From waterfront villas to sky-high penthouses, we design homes that balance grandeur with the intimacy of everyday living. Each project is tailored to how a family truly lives.",
@@ -38,8 +37,7 @@ export const sectors: Sector[] = [
     tagline: "Offices, headquarters & workspaces",
     intro:
       "Workspaces with the warmth of hospitality and the rigour of corporate design.",
-    cover:
-      "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1600&q=80",
+    cover: "/image/arab/modern-majlis.jpg",
     gallery: [
       "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=80",
       "https://images.unsplash.com/photo-1604328698692-f76ea9498e76?auto=format&fit=crop&w=1200&q=80",
@@ -98,8 +96,7 @@ export const sectors: Sector[] = [
     tagline: "Hotels, restaurants & lounges",
     intro:
       "Immersive hospitality interiors that create a sense of arrival and stay in the memory.",
-    cover:
-      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1600&q=80",
+    cover: "/image/arab/arabic-majlis.jpg",
     gallery: [
       "https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=1200&q=80",
       "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?auto=format&fit=crop&w=1200&q=80",

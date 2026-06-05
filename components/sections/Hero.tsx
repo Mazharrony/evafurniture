@@ -24,8 +24,8 @@ export function Hero() {
     >
       <motion.div style={{ y }} className="absolute inset-0">
         <Image
-          src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=2000&q=80"
-          alt="A serenely styled luxury interior with bespoke furniture"
+          src="/image/arab/moroccan-living-room.jpg"
+          alt="A luxurious Arabian majlis with gold detailing and arched alcoves"
           fill
           priority
           sizes="100vw"
