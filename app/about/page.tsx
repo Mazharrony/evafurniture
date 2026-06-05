@@ -39,33 +39,6 @@ const timeline = [
   { year: "2025", text: "Over 120 spaces delivered across the UAE and the Gulf." },
 ];
 
-const team = [
-  {
-    name: "Eva Karim",
-    role: "Founder & Creative Director",
-    image:
-      "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80",
-  },
-  {
-    name: "Daniel Hwang",
-    role: "Head of Interiors",
-    image:
-      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&q=80",
-  },
-  {
-    name: "Amira Saleh",
-    role: "Lead Furniture Designer",
-    image:
-      "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=800&q=80",
-  },
-  {
-    name: "Marco Bellini",
-    role: "Master Craftsman",
-    image:
-      "https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?auto=format&fit=crop&w=800&q=80",
-  },
-];
-
 export default function AboutPage() {
   return (
     <>
@@ -172,37 +145,6 @@ export default function AboutPage() {
                 <p className="text-base text-bone-soft md:col-span-10 md:text-lg">
                   {item.text}
                 </p>
-              </Reveal>
-            ))}
-          </div>
-        </Container>
-      </section>
-
-      {/* Team */}
-      <section className="bg-onyx-2 py-24 md:py-32">
-        <Container>
-          <SectionHeading
-            align="center"
-            eyebrow="The People"
-            arabic="فريقنا"
-            title="Designers and makers, working as one."
-          />
-          <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {team.map((member, i) => (
-              <Reveal key={member.name} delay={i * 0.06}>
-                <div className="relative aspect-[3/4] overflow-hidden bg-coal">
-                  <Image
-                    src={member.image}
-                    alt={member.name}
-                    fill
-                    sizes="(max-width: 768px) 100vw, 25vw"
-                    className="object-cover grayscale transition-all duration-700 hover:grayscale-0"
-                  />
-                </div>
-                <h3 className="mt-5 font-display text-xl font-light text-bone">
-                  {member.name}
-                </h3>
-                <p className="eyebrow mt-2 text-gold">{member.role}</p>
               </Reveal>
             ))}
           </div>
