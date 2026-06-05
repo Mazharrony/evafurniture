@@ -18,8 +18,8 @@ export const company = {
   address: "Shop 1 - 20A St - Al Satwa - Dubai, UAE",
   phone: "+971 50 573 5761",
   phoneHref: "tel:+971505735761",
-  email: "atelier@evadesignfurniture.ae",
-  emailHref: "mailto:atelier@evadesignfurniture.ae",
+  email: "info@evafurniture.ae",
+  emailHref: "mailto:info@evafurniture.ae",
   hours: "Sun–Thu · 9:00 – 18:00 GST",
   socials: [
     { label: "Instagram", href: "https://instagram.com" },

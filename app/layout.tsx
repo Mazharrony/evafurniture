@@ -25,7 +25,7 @@ const reemKufi = Reem_Kufi({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://evadesignfurniture.ae"),
+  metadataBase: new URL("https://evafurniture.ae"),
   title: {
     default:
       "Eva Design Furniture — Luxury Interiors & Custom Furniture, Dubai",
