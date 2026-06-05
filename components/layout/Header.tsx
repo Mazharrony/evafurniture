@@ -54,7 +54,11 @@ export function Header() {
                 href={link.href}
                 className={cn(
                   "group relative text-[0.82rem] tracking-wide transition-colors hover:text-bone",
-                  active ? "text-bone" : "text-muted",
+                  active
+                    ? "text-bone"
+                    : solid
+                      ? "text-muted"
+                      : "text-bone/85",
                 )}
               >
                 {link.label}
