@@ -34,7 +34,7 @@ const values = [
 const timeline = [
   { year: "2010", text: "Eva founds a small furniture workshop in Al Quoz, Dubai." },
   { year: "2014", text: "The studio expands into full-service interior design." },
-  { year: "2018", text: "Atelier relocates to Dubai Design District (d3)." },
+  { year: "2018", text: "Atelier relocates to its Al Satwa showroom and workshop." },
   { year: "2021", text: "Launch of our first signature furniture collection, Noor." },
   { year: "2025", text: "Over 120 spaces delivered across the UAE and the Gulf." },
 ];
@@ -110,7 +110,7 @@ export default function AboutPage() {
                 parts design house and atelier, remains our defining quality.
               </p>
               <p>
-                Today, from our home in Dubai Design District, a team of
+                Today, from our home in Al Satwa, a team of
                 forty designers and craftspeople creates interiors and furniture
                 for the region&apos;s most discerning homes and hospitality
                 spaces.

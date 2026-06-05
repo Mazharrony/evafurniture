@@ -8,7 +8,7 @@ import { company } from "@/data/nav";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Book a private consultation with Eva Design Furniture at our Dubai Design District atelier.",
+    "Book a private consultation with Eva Design Furniture at our Al Satwa atelier in Dubai.",
 };
 
 const details = [
@@ -37,7 +37,7 @@ export default function ContactPage() {
               Visit our atelier
             </h2>
             <p className="mt-4 text-sm leading-relaxed text-muted">
-              Located in the heart of Dubai Design District, our studio and
+              Located in the heart of Al Satwa, our studio and
               workshop are open for scheduled visits — the best way to
               experience our materials and craft first-hand.
             </p>
@@ -86,7 +86,7 @@ export default function ContactPage() {
         <div className="relative h-[360px] w-full bg-coal">
           <iframe
             title="Eva Design Furniture location"
-            src="https://www.openstreetmap.org/export/embed.html?bbox=55.28%2C25.18%2C55.32%2C25.21&layer=mapnik"
+            src="https://www.openstreetmap.org/export/embed.html?bbox=55.25%2C25.21%2C55.29%2C25.24&layer=mapnik&marker=25.2285%2C55.2700"
             className="h-full w-full opacity-80 grayscale invert"
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"

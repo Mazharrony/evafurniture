@@ -24,9 +24,9 @@ export function Intro() {
           </Reveal>
           <Reveal delay={0.15}>
             <div className="absolute -bottom-8 -right-4 hidden w-48 border border-gold/30 bg-coal p-6 md:block">
-              <p className="font-display text-4xl text-gold-leaf">d3</p>
+              <p className="font-display text-4xl text-gold-leaf">Satwa</p>
               <p className="mt-2 text-xs leading-relaxed text-muted">
-                Our atelier in Dubai Design District
+                Our atelier in Al Satwa, Dubai
               </p>
             </div>
           </Reveal>
