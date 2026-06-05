@@ -97,7 +97,8 @@ export const sectors: Sector[] = [
     tagline: "Hotels, restaurants & lounges",
     intro:
       "Immersive hospitality interiors that create a sense of arrival and stay in the memory.",
-    cover: "/image/arab/arabic-majlis.jpg",
+    cover:
+      "https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=1600&q=80",
     gallery: [
       "https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=1200&q=80",
       "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?auto=format&fit=crop&w=1200&q=80",
