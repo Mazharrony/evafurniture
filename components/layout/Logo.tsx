@@ -4,9 +4,11 @@ import { cn } from "@/lib/utils";
 
 export function Logo({
   light = true,
+  showWordmark = true,
   className,
 }: {
   light?: boolean;
+  showWordmark?: boolean;
   className?: string;
 }) {
   return (
@@ -25,24 +27,26 @@ export function Logo({
           priority
         />
       </span>
-      <span className="flex flex-col leading-none">
-        <span
-          className={cn(
-            "font-display text-lg tracking-tight",
-            light ? "text-bone" : "text-onyx",
-          )}
-        >
-          Eva Design
+      {showWordmark && (
+        <span className="flex flex-col leading-none">
+          <span
+            className={cn(
+              "font-display text-lg tracking-tight",
+              light ? "text-bone" : "text-onyx",
+            )}
+          >
+            Eva Design
+          </span>
+          <span
+            className={cn(
+              "eyebrow mt-1 text-[0.55rem]",
+              light ? "text-gold/70" : "text-gold-deep",
+            )}
+          >
+            Furnitures Trading L.L.C
+          </span>
         </span>
-        <span
-          className={cn(
-            "eyebrow mt-1 text-[0.55rem]",
-            light ? "text-gold/70" : "text-gold-deep",
-          )}
-        >
-          Furnitures Trading L.L.C
-        </span>
-      </span>
+      )}
     </Link>
   );
 }

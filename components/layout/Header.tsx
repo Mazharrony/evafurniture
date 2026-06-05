@@ -40,7 +40,7 @@ export function Header() {
       )}
     >
       <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-6 md:px-10">
-        <Logo />
+        <Logo showWordmark={false} />
 
         <nav className="hidden items-center gap-9 lg:flex">
           {navLinks.map((link) => {
