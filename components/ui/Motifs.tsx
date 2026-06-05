@@ -37,7 +37,7 @@ export function GoldDivider({ className }: { className?: string }) {
   return (
     <div className={cn("flex items-center justify-center gap-4", className)}>
       <span className="h-px flex-1 bg-gradient-to-r from-transparent to-gold/40" />
-      <span className="h-1.5 w-1.5 rotate-45 bg-gold" />
+      <span className="bg-gold-animated h-1.5 w-1.5 rotate-45" />
       <span className="h-px flex-1 bg-gradient-to-l from-transparent to-gold/40" />
     </div>
   );
