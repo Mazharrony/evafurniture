@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { cn } from "@/lib/utils";
 
 export function Logo({
@@ -14,9 +15,15 @@ export function Logo({
       aria-label="Eva Design Furniture — home"
       className={cn("group inline-flex items-center gap-3", className)}
     >
-      <span className="relative flex h-10 w-10 items-center justify-center">
-        <span className="absolute inset-0 rotate-45 rounded-[6px] border border-gold/50 transition-all duration-500 group-hover:rotate-[135deg] group-hover:border-gold" />
-        <span className="font-display text-lg leading-none text-gold">E</span>
+      <span className="relative h-12 w-24 shrink-0 transition-transform duration-500 group-hover:scale-105">
+        <Image
+          src="/brand/eva-mark.png"
+          alt="Eva Design Furniture monogram"
+          fill
+          sizes="96px"
+          className="object-contain object-left"
+          priority
+        />
       </span>
       <span className="flex flex-col leading-none">
         <span
@@ -33,9 +40,10 @@ export function Logo({
             light ? "text-gold/70" : "text-gold-deep",
           )}
         >
-          Furniture · Dubai
+          Furnitures Trading L.L.C
         </span>
       </span>
     </Link>
   );
 }
+
