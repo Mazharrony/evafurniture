@@ -8,11 +8,11 @@ export const sectors: Sector[] = [
     tagline: "Villas, penthouses & private homes",
     intro:
       "Bespoke interiors and custom furniture for the region's most private addresses.",
-    cover: "/image/arab/boho-majlis.jpg",
+    cover: "/image/residential/boho-majlis.jpg",
     gallery: [
-      "/image/arab/moroccan-living-room.jpg",
-      "/image/arab/traditional-majlis.jpg",
-      "/image/arab/arabic-majlis.jpg",
+      "/image/residential/moroccan-living-room.jpg",
+      "/image/residential/traditional-majlis.jpg",
+      "/image/residential/arabic-majlis.jpg",
     ],
     description: [
       "From waterfront villas to sky-high penthouses, we design homes that balance grandeur with the intimacy of everyday living. Each project is tailored to how a family truly lives.",
@@ -37,12 +37,11 @@ export const sectors: Sector[] = [
     tagline: "Offices, headquarters & workspaces",
     intro:
       "Workspaces with the warmth of hospitality and the rigour of corporate design.",
-    cover:
-      "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1600&q=80",
+    cover: "/image/commercial/commercial1.jpeg",
     gallery: [
-      "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1604328698692-f76ea9498e76?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1200&q=80",
+      "/image/commercial/commercial2.jpeg",
+      "/image/commercial/commercial1.jpeg",
+      "/image/commercial/commercial2.jpeg",
     ],
     description: [
       "We design commercial environments that express a brand and elevate the people within them — reception suites, boardrooms and executive floors with the soul of a private club.",
@@ -67,12 +66,11 @@ export const sectors: Sector[] = [
     tagline: "Boutiques, showrooms & flagships",
     intro:
       "Retail environments engineered to seduce, built to convert and made to last.",
-    cover:
-      "https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?auto=format&fit=crop&w=1600&q=80",
+    cover: "/image/retail/reatail1.jpeg",
     gallery: [
-      "https://images.unsplash.com/photo-1604719312566-8912e9227c6a?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1582037928769-181f2644ecb7?auto=format&fit=crop&w=1200&q=80",
+      "/image/retail/reatail2.jpeg",
+      "/image/retail/reatail1.jpeg",
+      "/image/retail/reatail2.jpeg",
     ],
     description: [
       "We craft boutiques and flagships that turn browsing into ritual — sculptural displays, considered lighting and material palettes that flatter the merchandise and the brand.",
@@ -97,12 +95,11 @@ export const sectors: Sector[] = [
     tagline: "Hotels, restaurants & lounges",
     intro:
       "Immersive hospitality interiors that create a sense of arrival and stay in the memory.",
-    cover:
-      "https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=1600&q=80",
+    cover: "/image/hospitality/hospitality1.jpeg",
     gallery: [
-      "https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1578683010236-d716f9a3f461?auto=format&fit=crop&w=1200&q=80",
+      "/image/hospitality/hospitality2.jpeg",
+      "/image/hospitality/hospitality3.jpeg",
+      "/image/hospitality/hospitality1.jpeg",
     ],
     description: [
       "For hotels, restaurants and lounges we design complete guest journeys — jewel-box lobbies, statement bars and suites with atelier-made furniture that gives each property a collectible identity.",

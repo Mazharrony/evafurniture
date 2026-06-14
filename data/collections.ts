@@ -73,26 +73,26 @@ export const collections: Collection[] = [
     tagline: "A modern ode to gathering",
     description:
       "Low, generous seating that reinterprets the traditional majlis for contemporary homes — modular, tactile and endlessly hospitable.",
-    cover: "/image/arab/modern-majlis.jpg",
+    cover: "/image/residential/modern-majlis.jpg",
     materials: ["Kiln-dried beech", "Linen blend", "Hand-knotted wool"],
     pieces: [
       {
         name: "Majlis Modular Sofa",
         type: "Seating",
         price: "From AED 28,000",
-        image: "/image/arab/boho-majlis.jpg",
+        image: "/image/residential/boho-majlis.jpg",
       },
       {
         name: "Majlis Floor Cushion",
         type: "Seating",
         price: "From AED 1,400",
-        image: "/image/arab/arabic-majlis.jpg",
+        image: "/image/residential/arabic-majlis.jpg",
       },
       {
         name: "Majlis Coffee Table",
         type: "Tables",
         price: "From AED 8,900",
-        image: "/image/arab/traditional-majlis.jpg",
+        image: "/image/residential/traditional-majlis.jpg",
       },
     ],
   },

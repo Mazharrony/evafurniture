@@ -13,7 +13,7 @@ export function Intro() {
           <Reveal>
             <div className="relative aspect-[4/5] overflow-hidden arch-top">
               <Image
-                src="/image/arab/traditional-majlis.jpg"
+                src="/image/residential/traditional-majlis.jpg"
                 alt="A traditional Arabian majlis with hand-carved geometric wall panels"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"

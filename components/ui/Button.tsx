@@ -46,17 +46,22 @@ export function Button({
   );
 }
 
+type ButtonLinkProps = CommonProps &
+  Omit<React.ComponentProps<typeof Link>, "className" | "children">;
+
 export function ButtonLink({
   variant = "primary",
   size = "md",
   className,
   href,
   children,
-}: CommonProps & { href: string }) {
+  ...props
+}: ButtonLinkProps) {
   return (
     <Link
       href={href}
       className={cn(base, variants[variant], sizes[size], className)}
+      {...props}
     >
       {children}
     </Link>
