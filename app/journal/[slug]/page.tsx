@@ -6,6 +6,8 @@ import { ArrowLeft } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { Reveal } from "@/components/ui/Reveal";
 import { ButtonLink } from "@/components/ui/Button";
+import { JsonLd } from "@/components/seo/JsonLd";
+import { articleSchema, breadcrumbSchema } from "@/lib/structured-data";
 import { posts, getPost } from "@/data/posts";
 
 export function generateStaticParams() {
@@ -20,9 +22,22 @@ export async function generateMetadata({
   const { slug } = await params;
   const post = getPost(slug);
   if (!post) return { title: "Article Not Found" };
+  const published = new Date(post.date);
+  const publishedTime = Number.isNaN(published.getTime())
+    ? undefined
+    : published.toISOString();
   return {
     title: post.title,
     description: post.excerpt,
+    alternates: { canonical: `/journal/${post.slug}` },
+    openGraph: {
+      title: post.title,
+      description: post.excerpt,
+      type: "article",
+      url: `/journal/${post.slug}`,
+      publishedTime,
+      authors: [post.author],
+    },
   };
 }
 
@@ -39,6 +54,16 @@ export default async function PostPage({
 
   return (
     <>
+      <JsonLd
+        data={[
+          articleSchema(post),
+          breadcrumbSchema([
+            { name: "Home", url: "/" },
+            { name: "Journal", url: "/journal" },
+            { name: post.title, url: `/journal/${post.slug}` },
+          ]),
+        ]}
+      />
       {/* Header */}
       <article className="bg-onyx">
         <header className="pt-32 pb-12 md:pt-44 md:pb-16">

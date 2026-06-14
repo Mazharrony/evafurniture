@@ -9,6 +9,7 @@ export const metadata: Metadata = {
   title: "Contact",
   description:
     "Book a private consultation with Eva Design Furniture at our Al Satwa atelier in Dubai.",
+  alternates: { canonical: "/contact" },
 };
 
 const details = [

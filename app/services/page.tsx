@@ -16,6 +16,7 @@ export const metadata: Metadata = {
   title: "Services",
   description:
     "Interior design, custom furniture and turnkey fit-out across residential, commercial, retail and hospitality — a complete luxury atelier in Dubai.",
+  alternates: { canonical: "/services" },
 };
 
 export default function ServicesPage() {

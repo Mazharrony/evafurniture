@@ -10,6 +10,7 @@ export const metadata: Metadata = {
   title: "Journal",
   description:
     "Notes on luxury interior design, craft and considered living from the Eva Design Furniture atelier in Dubai.",
+  alternates: { canonical: "/journal" },
 };
 
 export default function JournalPage() {

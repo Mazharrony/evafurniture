@@ -10,6 +10,7 @@ export const metadata: Metadata = {
   title: "About",
   description:
     "Meet Eva Design Furniture — a Dubai atelier of designers and master craftspeople creating bespoke interiors and custom furniture.",
+  alternates: { canonical: "/about" },
 };
 
 const values = [

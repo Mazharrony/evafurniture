@@ -12,6 +12,7 @@ export const metadata: Metadata = {
   title: "Collections",
   description:
     "Browse Eva Design Furniture's signature collections — bespoke seating, dining, lighting and storage, made to order in Dubai.",
+  alternates: { canonical: "/collections" },
 };
 
 export default function CollectionsPage() {

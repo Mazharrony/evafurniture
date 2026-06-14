@@ -8,6 +8,8 @@ import { Reveal } from "@/components/ui/Reveal";
 import { ButtonLink } from "@/components/ui/Button";
 import { GoldDivider, MashrabiyaPattern } from "@/components/ui/Motifs";
 import { CTABand } from "@/components/sections/CTABand";
+import { JsonLd } from "@/components/seo/JsonLd";
+import { breadcrumbSchema } from "@/lib/structured-data";
 import { sectors, getSector } from "@/data/sectors";
 
 export function generateStaticParams() {
@@ -25,6 +27,13 @@ export async function generateMetadata({
   return {
     title: `${data.name} Interiors & Furniture`,
     description: data.intro,
+    alternates: { canonical: `/services/${data.slug}` },
+    openGraph: {
+      title: `${data.name} Interiors & Furniture · Eva Design Furniture`,
+      description: data.intro,
+      type: "website",
+      url: `/services/${data.slug}`,
+    },
   };
 }
 
@@ -42,6 +51,13 @@ export default async function SectorPage({
 
   return (
     <>
+      <JsonLd
+        data={breadcrumbSchema([
+          { name: "Home", url: "/" },
+          { name: "Services", url: "/services" },
+          { name: data.name, url: `/services/${data.slug}` },
+        ])}
+      />
       {/* Hero */}
       <section className="grain relative flex min-h-[68vh] items-end overflow-hidden bg-onyx pt-32">
         <Image

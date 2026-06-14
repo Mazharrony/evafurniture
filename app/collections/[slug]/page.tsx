@@ -7,6 +7,8 @@ import { PageHeader } from "@/components/layout/PageHeader";
 import { Container } from "@/components/ui/Container";
 import { Reveal } from "@/components/ui/Reveal";
 import { ButtonLink } from "@/components/ui/Button";
+import { JsonLd } from "@/components/seo/JsonLd";
+import { breadcrumbSchema } from "@/lib/structured-data";
 import { collections, getCollection } from "@/data/collections";
 
 export function generateStaticParams() {
@@ -24,6 +26,13 @@ export async function generateMetadata({
   return {
     title: `${collection.name} Collection`,
     description: collection.description,
+    alternates: { canonical: `/collections/${collection.slug}` },
+    openGraph: {
+      title: `${collection.name} Collection · Eva Design Furniture`,
+      description: collection.description,
+      type: "website",
+      url: `/collections/${collection.slug}`,
+    },
   };
 }
 
@@ -38,6 +47,13 @@ export default async function CollectionPage({
 
   return (
     <>
+      <JsonLd
+        data={breadcrumbSchema([
+          { name: "Home", url: "/" },
+          { name: "Collections", url: "/collections" },
+          { name: collection.name, url: `/collections/${collection.slug}` },
+        ])}
+      />
       <PageHeader
         eyebrow={`${collection.tagline}`}
         title={`The ${collection.name} Collection`}

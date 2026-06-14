@@ -4,6 +4,8 @@ import "./globals.css";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { SmoothScroll } from "@/components/providers/SmoothScroll";
+import { JsonLd } from "@/components/seo/JsonLd";
+import { organizationSchema } from "@/lib/structured-data";
 
 const fraunces = Fraunces({
   variable: "--font-fraunces",
@@ -46,8 +48,28 @@ export const metadata: Metadata = {
       "A Dubai atelier crafting bespoke interiors and custom furniture.",
     type: "website",
     locale: "en_AE",
+    url: "https://evafurniture.ae",
+    siteName: "Eva Design Furniture",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Eva Design Furniture — Luxury Interiors & Custom Furniture",
+    description:
+      "A Dubai atelier crafting bespoke interiors and custom furniture.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
   },
 };
+
 
 export default function RootLayout({
   children,
@@ -61,6 +83,7 @@ export default function RootLayout({
       className={`${fraunces.variable} ${spaceGrotesk.variable} ${reemKufi.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-onyx text-bone">
+        <JsonLd data={organizationSchema()} />
         <SmoothScroll>
           <Header />
           <main className="flex-1">{children}</main>
