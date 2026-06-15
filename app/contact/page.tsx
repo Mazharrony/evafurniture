@@ -14,7 +14,14 @@ export const metadata: Metadata = {
 
 const details = [
   { icon: MapPin, label: "Atelier", value: company.address },
-  { icon: Phone, label: "Telephone", value: company.phone, href: company.phoneHref },
+  {
+    icon: Phone,
+    label: "Telephone",
+    value: company.phone,
+    href: company.phoneHref,
+    value2: company.phone2,
+    href2: company.phone2Href,
+  },
   { icon: Mail, label: "Email", value: company.email, href: company.emailHref },
   { icon: Clock, label: "Hours", value: company.hours },
 ];
@@ -60,6 +67,14 @@ export default function ContactPage() {
                     ) : (
                       <p className="mt-1 text-bone">{d.value}</p>
                     )}
+                    {d.href2 ? (
+                      <a
+                        href={d.href2}
+                        className="mt-1 block text-bone transition-colors hover:text-gold"
+                      >
+                        {d.value2}
+                      </a>
+                    ) : null}
                   </div>
                 </li>
               ))}

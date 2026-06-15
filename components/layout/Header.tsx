@@ -206,6 +206,12 @@ export function Header() {
                     {company.phone}
                   </a>
                   <a
+                    href={company.phone2Href}
+                    className="block transition-colors hover:text-bone"
+                  >
+                    {company.phone2}
+                  </a>
+                  <a
                     href={company.emailHref}
                     className="block transition-colors hover:text-bone"
                   >

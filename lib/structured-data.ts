@@ -13,7 +13,7 @@ export function organizationSchema() {
     logo: `${baseUrl}/brand/eva-logo.png`,
     description:
       "Dubai-based atelier crafting bespoke interiors and custom furniture for villas, hospitality and commercial spaces.",
-    telephone: company.phone,
+    telephone: [company.phone, company.phone2],
     email: company.email,
     address: {
       "@type": "PostalAddress",

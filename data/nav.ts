@@ -17,6 +17,8 @@ export const company = {
   address: "Shop 1 - 20A St - Al Satwa - Dubai, UAE",
   phone: "+971 52 699 9842",
   phoneHref: "tel:+971526999842",
+  phone2: "+971 52 776 5895",
+  phone2Href: "tel:+971527765895",
   email: "info@evafurniture.ae",
   emailHref: "mailto:info@evafurniture.ae",
   hours: "Sun–Thu · 9:00 – 18:00 GST",
